@@ -38,7 +38,55 @@
         </nav>
     </header>
  
-    <main> </main>
+    <main> 
+     <section class="page-banner py-4">
+      <div class="container">
+        <h1 class="mb-1">Explore Kingston Restaurants</h1>
+        <p class="mb-0">Choose a food type to filter the list, then open a restaurant for more details.</p>
+      </div>
+    </section>
+ 
+    <section class="py-4">
+      <div class="container">   
+
+                <!-- FILTER BUTTONS -->
+        <div id="filters" class="d-flex flex-wrap gap-2 mb-3" role="group" aria-label="Filter restaurants by food type">
+          <button type="button" class="btn btn-dark filter-btn" data-category="All">All</button>
+          <button type="button" class="btn btn-outline-dark filter-btn" data-category="Jerk">Jerk</button>
+          <button type="button" class="btn btn-outline-dark filter-btn" data-category="Seafood">Seafood</button>
+          <button type="button" class="btn btn-outline-dark filter-btn" data-category="Bakery">Bakery</button>
+          <button type="button" class="btn btn-outline-dark filter-btn" data-category="Breakfast">Breakfast</button>
+          <button type="button" class="btn btn-outline-dark filter-btn" data-category="Soups">Soups</button>
+          <button type="button" class="btn btn-outline-dark filter-btn" data-category="Grill">Grill</button>
+        </div>
+ 
+        <!-- Shows "Showing 6 restaurants" (JavaScript will update this text) -->
+        <p id="resultCount" class="text-muted" aria-live="polite"></p>
+ 
+        <!-- JavaScript fills this row with one card per restaurant -->
+        <div id="restaurantList" class="row g-4"></div>
+      </div>
+    </section>
+
+    </main>
+
+    <!-- DETAILS MODAL (hidden until a "View details" button is clicked) -->
+  <!-- This is a BOOTSTRAP MODAL. JavaScript fills in the title and body then opens it. -->
+  <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="modalTitle">Restaurant details</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          <a href="reserve.html" class="btn btn-warning">Request a reservation</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!--FOOTER -->
     <footer class="bg-black text-light py-4">
@@ -49,6 +97,7 @@
     </footer>
 
     <!--SCRIPT -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <!--MY SCRIPT -->
     <script src="js/app.js"></script>
