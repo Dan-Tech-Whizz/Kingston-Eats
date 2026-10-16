@@ -1,6 +1,6 @@
 /* Colour "variables" so we can reuse them and change them in one place */
 :root {
-  --ke-green: #009B3A;   /* deep green */
+  --ke-green: #09572b;   /* deep green */
   --ke-gold: #f2b705;    /* gold */
   --ke-pepper: #c2410c;  /* scotch-bonnet orange */
 }
@@ -54,5 +54,13 @@ textarea:focus-visible {
   font-weight: bold;
   transform: scale(1.05);
   transition:all 0.3s ease;
+}
 
-  
+/* 10.Making hamburger button more obvious */
+.navbar-toggler {
+  border: 2px solid #ffffff !important;
+}
+.navbar-toggler-icon {
+ filter: brightness(0) invert(1); /*Making the 3 lines white */
+
+} 
