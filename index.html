@@ -16,17 +16,17 @@
     <header> 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <!-- 1. Brand Logo/Text -->
+                <!-- Brand Logo/Text -->
                 <a class="navbar-brand fw-bold" href="index.html">Kingston <span class="brand-accent">Eats</span></a>
      
-                <!-- 2. Hamburger Toggler Button (Mobile Only) -->
+                <!-- Hamburger Toggler Button (Mobile Only) -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#mainNav" aria-controls="mainNav"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>  
 
-                <!-- 3. Collapsible Navigation Container Menu Links -->
+                <!-- Navigation Container Menu Links -->
                 <div class="collapse navbar-collapse" id="mainNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
@@ -37,9 +37,69 @@
             </div>
         </nav>
     </header>
-
+ 
     <main>
-        <!-- To do in the morning! -->
+        <!-- HERO -->
+        <section class="hero py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h1 class="display-3 fw-bold">Welcome to Kingston Eats</h1>
+                        <h2 class="display-6 fw-bold text-warning">Good Food, Betta wid every bite!</h2>
+                        <p class="lead mt-3">Your ultimate guide to the best dining experience in Kingston. 
+                            Send us a reservation request or walk right in if you're in the area!</p>
+                        <div class="mt-4 d-flex flex-wrap gap-2">
+                            <a href="explore.html" class="btn btn-warning btn-lg">Explore Restaurants</a>
+                        </div>
+                    </div> <!-- Added closing col tag -->
+                </div> <!-- Aligned row layout -->
+            </div> <!-- Closed container wrapper -->
+        </section>
+        
+        <!-- WHY KINGSTON EATS (3 static cards) -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="mb-4">Why Kingston Eats?</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-md-4">
+                        <article class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Local Favourites</h3>
+                                <p class="card-text">From jerk centers to bakeries, see the places people around Kingston actually dine.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <article class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Easy Browsing</h3>
+                                <p class="card-text">Filter by food type and open a restaurant's details without leaving the page.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <article class="card h-100">
+                            <div class="card-body">
+                                <h3 class="h5 card-title">Quick Reservations</h3>
+                                <p class="card-text">Pick a restaurant, choose a date and group size, and send your request.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- TOP RATED (cards are built by JavaScript) -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+                    <h2 class="mb-0">Top rated spots</h2>
+                    <a href="explore.html" class="btn btn-outline-dark mt-2 mt-sm-0">See all restaurants</a>
+                </div>
+                <!-- JavaScript fills this row in (renderFeatured in js/app.js) -->
+                <div id="featuredList" class="row g-4"></div>
+            </div>
+        </section>
     </main>
 
     <!--FOOTER -->

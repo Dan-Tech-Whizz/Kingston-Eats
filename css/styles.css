@@ -1,0 +1,58 @@
+/* Colour "variables" so we can reuse them and change them in one place */
+:root {
+  --ke-green: #009B3A;   /* deep green */
+  --ke-gold: #f2b705;    /* gold */
+  --ke-pepper: #c2410c;  /* scotch-bonnet orange */
+}
+ 
+/* 2. Navbar brand: the word "Eats" in gold */
+.brand-accent {
+  color: var(--ke-gold);
+}
+ 
+/* 3. Home page hero (big banner at the top) */
+.hero {
+  background-color: var(--ke-green);
+  color: #ffffff;
+}
+ 
+/* 4. Banner at the top of the Explore and Reserve pages */
+.page-banner {
+  background-color: var(--ke-green);
+  color: #ffffff;
+}
+ 
+/* 5. Make every card image the same height so the grid looks tidy */
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+ 
+/* 6. The little coloured label on each card (e.g. "Jerk") */
+.category-badge {
+  background-color: var(--ke-pepper);
+  color: #ffffff;
+}
+ 
+/* 7. Make the keyboard focus outline easy to see (accessibility) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--ke-gold);
+  outline-offset: 2px;
+}
+ 
+/* 8. Smooth shadow change when jQuery adds/removes "shadow-lg" on a card */
+.card {
+  transition: box-shadow 0.2s ease;
+}
+ 
+/* 9. Adding hover effect to explore resturants on index pg */
+.hero .btn:hover {
+  font-weight: bold;
+  transform: scale(1.05);
+  transition:all 0.3s ease;
+
+  
