@@ -1,3 +1,5 @@
+/* ARRAY of OBJECTS*/
+
 const restaurants = [
   {
     id: 1,
@@ -74,13 +76,17 @@ const restaurants = [
 ];
  
  
-/* ---------------------------------------------------------------------
-   2. SMALL HELPER FUNCTIONS
-   --------------------------------------------------------------------- */
+/* SMALL HELPER FUNCTIONS*/
  
-// Turns the number 2 into "$$" so prices are easy to read.
+// Turns numbers into price decription
 function priceSymbols(price) {
-  return "$".repeat(price);
+  if (price === 1) {
+    return "Budget-friendly";
+  } else if (price === 2) {
+    return "Moderate";
+  } else {
+    return "Pricey";
+  }
 }
  
 // Turns true/false into words.
@@ -92,7 +98,7 @@ function statusText(openNow) {
   }
 }
  
-// Returns today's date as "YYYY-MM-DD" (the format a date input uses).
+// Returns today's date as "YYYY-MM-DD" 
 function getTodayString() {
   const now = new Date();
   const year = now.getFullYear();
@@ -102,9 +108,7 @@ function getTodayString() {
 }
  
  
-/* ---------------------------------------------------------------------
-   3. HOME PAGE: show the top 3 rated restaurants
-   --------------------------------------------------------------------- */
+/* HOME PAGE: show the top 3 rated restaurants */
 const featuredEl = document.getElementById("featuredList");
  
 function renderFeatured() {
@@ -136,9 +140,7 @@ if (featuredEl) {
 }
  
  
-/* ---------------------------------------------------------------------
-   4. EXPLORE PAGE: cards, filter, details modal
-   --------------------------------------------------------------------- */
+/* EXPLORE PAGE: cards, filter, details modal */
 const listEl = document.getElementById("restaurantList");
 const countEl = document.getElementById("resultCount");
  
