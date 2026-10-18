@@ -10,8 +10,8 @@ const restaurants = [
     rating: 4.9,
     openNow: true,
     description: "Kingston favourite for smoky jerk chicken, jerk pork and festival. Lunch rush daily 12-3pm.",
-    image: "images/jerk.svg",
-    imageAlt: "Jerk chicken plate with rice and peas"
+    image: "images/jerk.jpg",
+    imageAlt: "Jerk chicken"
   },
   {
     id: 2,
@@ -22,8 +22,8 @@ const restaurants = [
     rating: 4.4,
     openNow: false,
     description: "Fresh fried fish with bammy and escovitch, plus steamed fish on weekends.",
-    image: "images/seafood.svg",
-    imageAlt: "Fried fish with bammy and festival"
+    image: "images/fish.jfif",
+    imageAlt: "Fish with bammy and festival"
   },
   {
     id: 3,
@@ -34,8 +34,8 @@ const restaurants = [
     rating: 4.2,
     openNow: true,
     description: "Fresh patties, coco bread and spiced bun baked every morning. Cakes and pastries for special occasions.",
-    image: "images/bakery.svg",
-    imageAlt: "Jamaican beef patties and coco bread"
+    image: "images/bakery.jpg",
+    imageAlt: "pastries"
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const restaurants = [
     rating: 4.5,
     openNow: true,
     description: "Early morning spot for ackee and saltfish, liver and banana, plus manish water and red peas soup on Saturdays.",
-    image: "images/breakfast.svg",
+    image: "images/breakfast.jpg",
     imageAlt: "Ackee and saltfish breakfast plate"
   },
   {
@@ -58,8 +58,8 @@ const restaurants = [
     rating: 4.0,
     openNow: false,
     description: "Coronation Market style soups - fish tea, mannish water and chicken foot soup. Jerk chicken on Fridays.",
-    image: "images/soup.svg",
-    imageAlt: "Steaming bowl of Jamaican red peas soup"
+    image: "images/soup.jpg",
+    imageAlt: "Steaming bowl of Jamaican pumpkin soup"
   },
   {
     id: 6,
@@ -70,8 +70,8 @@ const restaurants = [
     rating: 4.3,
     openNow: true,
     description: "Mix grill platters - grilled lobster, jerk wings and steak. Good for after-work lime.",
-    image: "images/grill.svg",
-    imageAlt: "Mixed grill platter with lobster and jerk chicken"
+    image: "images/jerkpork.jfif",
+    imageAlt: "Jerk pork"
   }
 ];
  
@@ -355,10 +355,8 @@ if (formEl) {
 }
  
  
-/* ---------------------------------------------------------------------
-   6. jQuery feature #2: cards get a bigger shadow when the mouse is over them.
-   $(document).on(...) also works for cards that JavaScript creates later.
-   --------------------------------------------------------------------- */
+/* jQuery feature #2: cards get a bigger shadow when the mouse is over them.
+   $(document).on(...) also works for cards that JavaScript creates later. */
 $(document).on("mouseenter", ".card", function () {
   $(this).addClass("shadow-lg");
 });

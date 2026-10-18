@@ -24,7 +24,7 @@
  
 /* 5. Make every card image the same height so the grid looks tidy */
 .card-img-top {
-  height: 180px;
+  height: 350px;
   object-fit: cover;
 }
  
